@@ -3,7 +3,7 @@ const path = require('path')
 const app = express()
 const router = express.Router()
 
-const DIST_DIR = path.join(__dirname, 'dist')
+const DIST_DIR = path.join(__dirname, 'src')
 const PORT = process.env.PORT || 3000
 
 app.use(express.static(DIST_DIR))

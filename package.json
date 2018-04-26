@@ -20,7 +20,7 @@
     },
     "scripts": {
         "build": "webpack",
-        "start": "npm run build && node server",
+        "start": "node server",
         "test": "mocha"
     },
     "dependencies": {
