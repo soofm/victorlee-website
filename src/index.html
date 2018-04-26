@@ -14,7 +14,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
 
   </head>
 
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Icon</a>
+        <a class="navbar-brand" href="#">Victor Lee</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,29 +49,39 @@
     </nav>
 
     <!-- Page Content -->
-    <section class="bg-primary" id="content">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-              <h1 class="mt-5">Victor Lee</h1>
-              <p class="lead">Software Engineer</p>
-            </div>
-          </div>
+    <section class="bg-primary" id="splash">
+      <div class="container p-2">
+        <div class="col-lg-12 text-center">
+          <img src="assets/20180117_021753_HDR.jpg" alt="Photo" />
+          <h1 class="mt-2">Victor Lee</h1>
+          <p class="lead">Software Engineer</p>
         </div>
+      </div>
+    </section>
+    <section id="info">
+      <div class="container block p3">
         <div class="row">
-          <section class="col" id="about">
+          <div class="col sm-col-9 px2" id="about">
+            <h3 class="mb-2">About Me</h3>
             <p>My name is Victor Lee. This is my website. Here is some information about me.</p> 
-          </section>
-          <section class="col" id="social">
-            Find me on:
+          </div>
+          <div class="col sm-col-3 px2" id="social">
+            <h3 class="mb2">Contact</h3>
             <ul class="list-unstyled">
               <li><a href="https://github.com/soofm"><img src="assets/github.svg" alt="GitHub" />GitHub</a></li>
               <li><a href="https://www.linkedin.com/in/victor-lee-b1b00846/"><img src="assets/linkedin.svg" alt="LinkedIn" />LinkedIn</a></li>
+              <li><a href="mailto:victorlee228@gmail.com"><img src="assets/gmail.svg" alt="Gmail" />Email</a></li>
             </ul>
-          </section>
+          </div>
         </div>
       </div>
-  </section>
+    </section>
+    <section id="portfolio">
+      <div class="container">
+        <h3>Portfolio</h3>
+        <p>Here is some stuff that I have been working on.</p>
+      </div>
+    </section>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
