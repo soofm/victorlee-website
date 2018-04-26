@@ -28,17 +28,17 @@
         "copy-webpack-plugin": "^4.5.1",
         "eslint": "^4.19.1",
         "express": "^4.16.3",
-        "mocha": "^5.1.1"
+        "mocha": "^5.1.1",
+        "webpack": "^4.6.0",
+        "webpack-cli": "^2.0.15"
     },
     "devDependencies": {
         "eslint-config-airbnb": "^16.1.0",
         "eslint-plugin-import": "^2.11.0",
         "eslint-plugin-jsx-a11y": "^6.0.3",
-        "eslint-plugin-react": "^7.7.0",
-        "webpack": "^4.6.0",
-        "webpack-cli": "^2.0.15"
+        "eslint-plugin-react": "^7.7.0"
     },
     "engines": {
-        "node": ">=8.1.4"
+        "node": ">=8.11.1"
     }
 }
