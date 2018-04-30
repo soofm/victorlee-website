@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import './styles/nav.scss';
 
 class NavComponent extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class NavComponent extends Component {
       <div>
         <div id="top"></div>
         <Navbar color="light" light expand="md" fixed="top">
-          <NavbarBrand href="/">Victor Lee</NavbarBrand>
+          <NavbarBrand className="text-uppercase" href="/">Victor Lee</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

@@ -7,27 +7,30 @@ import {
 import './styles/content.scss';
 
 const ContentComponent = () => (
-  <div className="text-center">
-    <Container className="p-2 bg-primary" fluid="true">
+  <div>
+    <Container className="p-2 bg-aqua" fluid="true">
       <Row>
-        <Col id="splash">
+        <Col className="text-center" id="splash">
           <img src={require('./assets/myPhoto.jpg')} alt="" />
-          <h1 className="mt-2">Victor Lee</h1>
+          <h1 className="mt-2"><strong>Victor Lee</strong></h1>
           <p className="lead">Software Engineer</p>
         </Col>
       </Row>
     </Container>
-    <Container className="d-flex flex-row flex-wrap justify-content-center">
+    <Container className="d-flex flex-row flex-wrap justify-content-between" id="content">
       <Row>
         <Col className="p-2" md="9" id="about">
           <h3 className="mb-2">About Me</h3>
-          <p className="w-50 mx-auto">
-          Hello, my name is Victor Lee. I have been working as a software engineer in the RTP area of North Carolina
-          since 2012. I got my BS at Georgia Institute of Technology.
-          <br /><br />
-          I'm a foodie! When I'm not programming, I enjoy cooking and traveling, and discovering new cuisines. I am
-          also interested in crafting things.
-          </p>
+          <div>
+            <p>
+            Hello, my name is Victor Lee. I have been working as a software engineer in the RTP area of North Carolina
+            since 2012. I got my BS at Georgia Institute of Technology.
+            </p>
+            <p>
+            I'm a foodie! When I'm not programming, I enjoy cooking and traveling, and discovering new cuisines. I am
+            also interested in crafting things.
+            </p>
+          </div>
         </Col>
         <Col className="p-2" md="3" id="social">
           <h3 className="mb-2">Contact</h3>
@@ -60,7 +63,7 @@ const ContentComponent = () => (
               Other projects will go here
             </li>
             <li>
-              Other projects will go here
+              
             </li>
           </ul>
         </Col>
