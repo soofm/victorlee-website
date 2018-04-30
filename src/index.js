@@ -1,14 +1,14 @@
-// const ReactStrap = require('react-strap');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/index.scss';
+import NavComponent from './nav';
+import ContentComponent from './content';
 
-require('html-loader!./index.html');
-require('./styles/app.scss');
-
-function importAll(r) {
-  const images = {};
-  r.keys().array.forEach((item) => {
-    images[item.replace('./', '')] = r(item);
-  });
-  return images;
-}
-
-importAll(require.context('./assets', false, /\.(png|jpe?g|svg)$/));
+ReactDOM.render(
+  <div>
+    <NavComponent />
+    <ContentComponent />
+  </div>,
+  document.getElementById('root')
+);

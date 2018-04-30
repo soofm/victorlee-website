@@ -1,0 +1,17 @@
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+body {
+  font-family: 'Merriweather', serif;
+  padding-top: 3.3rem;
+}
+
+@include media-breakpoint-up(md) {
+  body {
+    padding-top: 3.5rem;
+  }
+}

@@ -33,10 +33,14 @@
         "popper.js": "^1.14.3",
         "react": "^16.3.2",
         "react-dom": "^16.3.2",
-        "react-strap": "0.0.1"
+        "reactstrap": "^5.0.0"
     },
     "devDependencies": {
         "autoprefixer": "^8.4.1",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
         "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^0.28.11",
         "eslint-config-airbnb": "^16.1.0",
@@ -44,9 +48,7 @@
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.7.0",
         "exports-loader": "^0.7.0",
-        "extract-loader": "^2.0.1",
         "file-loader": "^1.1.11",
-        "html-loader": "^0.5.5",
         "html-webpack-plugin": "^3.2.0",
         "node-sass": "^4.9.0",
         "postcss-loader": "^2.1.4",

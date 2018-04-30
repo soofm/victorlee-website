@@ -13,8 +13,26 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
         test: /\.(png|svg|jpg|gif)$/,
         use: 'file-loader',
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -45,6 +63,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
+      template: './public/index.html',
+      favicon: './public/favicon.ico',
       title: 'Victor\'s Website',
     }),
   ],
