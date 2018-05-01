@@ -8,10 +8,12 @@ import './styles/content.scss';
 
 const ContentComponent = () => (
   <div>
-    <Container className="p-2 bg-aqua" fluid="true">
+    <Container className="p-2 bg-splash" fluid="true">
       <Row>
         <Col className="text-center" id="splash">
-          <img src={require('./assets/myPhoto.jpg')} alt="" />
+          <a href>
+            <img src={require('./assets/myPhoto.jpg')} className="border bg-white rounded-circle p-1" alt="" />
+          </a>
           <h1 className="mt-2"><strong>Victor Lee</strong></h1>
           <p className="lead">Software Engineer</p>
         </Col>

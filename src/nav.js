@@ -28,8 +28,8 @@ class NavComponent extends Component {
     return (
       <div>
         <div id="top"></div>
-        <Navbar color="light" light expand="md" fixed="top">
-          <NavbarBrand className="text-uppercase" href="/">Victor Lee</NavbarBrand>
+        <Navbar className="text-uppercase" color="light" light expand="md" fixed="top">
+          <NavbarBrand href="/">Victor Lee</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
