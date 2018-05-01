@@ -2,10 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const SRC_PATH = path.resolve(__dirname, 'src'),
+      PUBLIC_PATH = path.resolve(__dirname, 'public');
+
 module.exports = {
-  mode: 'production',
-  entry: './src/index.js',
+  mode: 'development',
+  entry: path.join(SRC_PATH, 'index.js'),
   target: 'node',
+  devtool: "#eval-source-map",
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.js',
@@ -63,8 +67,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/favicon.ico',
+      template: path.join(PUBLIC_PATH, 'index.html'),
+      favicon: path.join(PUBLIC_PATH, 'favicon.ico'),
       title: 'Victor\'s Website',
     }),
   ],

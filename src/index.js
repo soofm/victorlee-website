@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/index.scss';
+import './index.scss';
 import NavComponent from './nav';
-import ContentComponent from './content';
+import HomeComponent from './routes/home/home';
+import Connect4Game from './routes/connect4/connect4';
 
 ReactDOM.render(
   <div>
     <NavComponent />
-    <ContentComponent />
+    <HomeComponent />
+    <Connect4Game />
   </div>,
   document.getElementById('root')
 );
