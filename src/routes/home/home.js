@@ -10,14 +10,12 @@ import './home.scss';
 
 const HomeComponent = () => (
   <div>
-    <Container className="p-2 bg-splash" fluid="true">
+    <Container className="p-2 bg-splash" fluid={true}>
       <Row>
         <Col className="text-center" id="splash">
-          <a href>
-            <img src={require('./myPhoto.jpg')} className="border bg-white rounded-circle p-1" alt="" />
-          </a>
+          <img src={require('./myPhoto.jpg')} className="border bg-white rounded-circle p-1" alt="" />
           <h1 className="mt-2"><strong>Victor Lee</strong></h1>
-          <p className="lead">Software Engineer</p>
+          <p className="lead mb-0">Software Engineer</p>
         </Col>
       </Row>
     </Container>
@@ -62,7 +60,7 @@ const HomeComponent = () => (
           <p>Here is some stuff that I have been working on.</p>
           <ListGroup>
             <ListGroupItem>
-              <strong>Connect 4</strong> - Play<a href="/connect4">Connect 4</a> against an AI here.
+              <strong>Connect 4</strong> - Play <a href="/connect4">Connect 4</a> against an AI here.
             </ListGroupItem>
             <ListGroupItem>
               <strong>Machine learning WIP</strong> - A ML project will go here.

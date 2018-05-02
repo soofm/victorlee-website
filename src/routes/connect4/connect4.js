@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import {
-  Container,
-  Col,
-  Row,
-} from 'reactstrap';
 import './connect4.scss';
 
 function Square(props) {
   return (
-    <button className="btn-square" onClick={props.onClick}>
-      <div className="border rounded-circle">
+    <div className="board-square" onClick={props.onClick}>
+      <div className="board-circle">
         {props.value}
       </div>
-    </button>
+    </div>
   );
 }
 
@@ -21,13 +16,23 @@ class Board extends React.Component {
     return (
       <Square value={this.props.squares[i]}
               onClick={() => this.props.onClick(i)}
+              key={i}
       />
     )
   };
   render() {
+    const boardSize = 7;
+    const board = [];
+    for (let i = 0; i < boardSize; i++) {
+      let row = [];
+      for (let j = 0; j < boardSize; j++) {
+        row.push(this.renderSquare(boardSize * i + j));
+      }
+      board.push(<div className="board-row" key={i}>{row}</div>);
+    }
     return (
-      <div>
-        {this.renderSquare(0)}
+      <div className="board">
+        {board}
       </div>
     );
   }
@@ -37,14 +42,15 @@ class Connect4Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      i: 0
+      squares: Array(49).fill(null)
     };
   }
   render() {
     return (
-      <div>
-        <Board />
-      </div>
+      <Board squares={this.state.squares}
+             onClick={(i) => console.log(i)} />
     )
   }
 }
+
+export default Connect4Game;

@@ -33,7 +33,7 @@ class NavComponent extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem active="true">
+              <NavItem active={true}>
                 <NavLink href="#top">Home
                   <span className="sr-only">(current)</span>
                 </NavLink>

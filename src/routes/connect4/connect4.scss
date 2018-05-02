@@ -1,3 +1,26 @@
-.btn-square {
-  border-radius: 0;
+.board-circle {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.board-square {
+  background-color: darkgray;
+  border: 1px solid black;
+  margin: 1%;
+  overflow: hidden;
+  padding-bottom: 12%; // equal to width for square aspect ratio
+  width: 12%;
+}
+
+.board-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; 
+}
+
+.board {
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
 }
