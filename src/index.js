@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
-import NavComponent from './nav';
-import HomeComponent from './routes/home/home';
-import Connect4Game from './routes/connect4/connect4';
+import Header from './header';
+import Home from './routes/home/home';
+import Connect4 from './routes/connect4/connect4';
 
 ReactDOM.render(
-  <div>
-    <NavComponent />
-    <HomeComponent />
-    <Connect4Game />
-  </div>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <div>
+      <Header />
+
+      <Route exact path="/" component={Home} />
+      <Route exact path="/connect4" component={Connect4} />
+    </div>
+  </BrowserRouter>,
+  document.getElementById('root'),
 );

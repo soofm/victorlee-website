@@ -8,9 +8,9 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-import './nav.scss';
+import './header.scss';
 
-class NavComponent extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -27,25 +27,19 @@ class NavComponent extends Component {
   render() {
     return (
       <div>
-        <div id="top"></div>
-        <Navbar className="text-uppercase" color="light" light expand="md" fixed="top">
+        <div id="top" />
+        <Navbar className="text-uppercase" color="light" light expand="sm" fixed="top">
           <NavbarBrand href="/">Victor Lee</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem active={true}>
+              <NavItem active>
                 <NavLink href="#top">Home
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#about">About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#social">Contact</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#portfolio">Portfolio</NavLink>
+                <NavLink href="#top">Projects</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -55,4 +49,4 @@ class NavComponent extends Component {
   }
 }
 
-export default NavComponent;
+export default Header;

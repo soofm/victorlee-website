@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Col,
@@ -8,7 +9,7 @@ import {
 } from 'reactstrap';
 import './home.scss';
 
-const HomeComponent = () => (
+const Home = () => (
   <div>
     <Container className="p-2 bg-splash" fluid={true}>
       <Row>
@@ -56,11 +57,11 @@ const HomeComponent = () => (
       </Row>
       <Row>
         <Col className="p-2" id="portfolio">
-          <h3 className="mb-2">Portfolio</h3>
+          <h3 className="mb-2">Projects</h3>
           <p>Here is some stuff that I have been working on.</p>
           <ListGroup>
             <ListGroupItem>
-              <strong>Connect 4</strong> - Play <a href="/connect4">Connect 4</a> against an AI here.
+              <strong>Connect 4</strong> - Play <Link to="/connect4">Connect 4</Link> against an AI here.
             </ListGroupItem>
             <ListGroupItem>
               <strong>Machine learning WIP</strong> - A ML project will go here.
@@ -76,4 +77,4 @@ const HomeComponent = () => (
   </div>
 );
 
-export default HomeComponent;
+export default Home;
