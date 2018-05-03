@@ -1,26 +1,57 @@
+$circle-size: 80%;
+
+@keyframes piece-drop {
+  0% { transform: translateY(-700%); z-index: 5; }
+  100% { transform: translateY(0); z-index: 1; }
+}
+
 .board-circle {
   background-color: white;
-  border-radius: 50%;
+  border: 1px solid black;
+  border-radius: 100%;
+  height: $circle-size;
+  left: (100% - $circle-size) / 2;
+  position: absolute;
+  top: (100% - $circle-size) / 2;
+  width: $circle-size;
+  z-index: 1;
 }
 
 .board-square {
-  background-color: darkgray;
+  background-color: white;
   border: 1px solid black;
-  margin: 1%;
+  height: auto;
   overflow: hidden;
-  padding-bottom: 12%; // equal to width for square aspect ratio
-  width: 12%;
+  padding: 1%;
 }
 
-.board-row {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%; 
+.board-square:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.board-square-wrapper {
+  position: relative;
 }
 
 .board {
-  justify-content: center;
+  box-sizing: border-box;
+  display: grid;
+  grid: repeat(7, 1fr) / repeat(7, 1fr);
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 720px;
   width: 100%;
+}
+
+.player {
+  background-color: red;
+  animation-name: piece-drop;
+  animation-duration: 2s;
+}
+
+.ai {
+  background-color: black;
+  animation-name: piece-drop;
+  animation-duration: 2s;
 }

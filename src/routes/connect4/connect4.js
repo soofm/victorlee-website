@@ -6,9 +6,9 @@ const boardSize = 7;
 function Square(props) {
   return (
     <div className="board-square" onClick={props.onClick}>
-      <div className="board-circle">
-        {props.value}
-      </div>
+      {
+        props.value ? <div className={`board-circle ${props.value}`} /> : null
+      }
     </div>
   );
 }
@@ -16,21 +16,21 @@ function Square(props) {
 class Board extends Component {
   renderSquare(i) {
     return (
-      <Square
-        value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)}
-        key={i}
-      />
+      <div key={`wrapper${i}`} className="board-square-wrapper">
+        <Square
+          value={this.props.squares[i]}
+          onClick={() => this.props.onClick(i)}
+          key={i}
+        />
+      </div>
     );
   };
   render() {
     const board = [];
     for (let i = 0; i < boardSize; i++) {
-      const row = [];
       for (let j = 0; j < boardSize; j++) {
-        row.push(this.renderSquare((boardSize * i) + j));
+        board.push(this.renderSquare((boardSize * i) + j));
       }
-      board.push(<div className="board-row" key={i}>{row}</div>);
     }
     return (
       <div className="board">
@@ -53,12 +53,13 @@ class Connect4 extends Component {
     for (let i = boardSize - 1; i>=0; i--) {
       const sq = (boardSize * i) + col;
       if (copy[sq] == null) {
-        console.log(`placing piece @ ${sq}`);
-        copy[sq] = 'O';
-        continue;
+        copy[sq] = 'player';
+        break;
       }
     }
-    this.setState(copy);
+    this.setState({
+      squares: copy
+    });
   }
   render() {
     return (
