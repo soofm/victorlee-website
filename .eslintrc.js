@@ -1,7 +1,7 @@
 module.exports = {
     "extends": "airbnb",
     "rules": {
-        "global-require": false,
+        "global-require": 0,
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     },
 };

@@ -38,20 +38,23 @@ $circle-size: 80%;
 .board {
   box-sizing: border-box;
   display: grid;
-  grid: repeat(7, 1fr) / repeat(7, 1fr);
+  grid: repeat(6, 1fr) / repeat(7, 1fr);
   margin: 0 auto;
   max-width: 720px;
   width: 100%;
 }
 
-.player {
-  background-color: red;
+@mixin anim {
   animation-name: piece-drop;
-  animation-duration: 2s;
+  animation-duration: 1s;
+}
+
+.player {
+  @include anim;
+  background-color: red;
 }
 
 .ai {
+  @include anim;
   background-color: black;
-  animation-name: piece-drop;
-  animation-duration: 2s;
 }
