@@ -67,8 +67,8 @@ const Home = () => (
               <strong>Machine learning WIP</strong> - A ML project will go here.
             </ListGroupItem>
             <ListGroupItem>
-              <strong>This website!</strong> This website was created from scratch using React.js, Bootstrap 4, Webpack,
-              and an Node.js backend using the Express.js framework.
+              <strong>This website!</strong> This website was created from scratch using React, Bootstrap 4, Webpack,
+              and an Node.js backend using the Express framework.
             </ListGroupItem>
           </ListGroup>
         </Col>
